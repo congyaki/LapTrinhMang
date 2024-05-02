@@ -59,14 +59,14 @@ public class MainForm extends javax.swing.JFrame {
      }
     
     public void connect(){
-        appendMessage(" Đang kết nối...", "Trạng thái", Color.PINK, Color.PINK);
+        appendMessage(" Đang kết nối...", "Trạng thái", Color.BLUE, Color.BLUE);
         try {
             socket = new Socket(host, port);
             dos = new DataOutputStream(socket.getOutputStream());
             // gửi username đang kết nối
             dos.writeUTF("CMD_JOIN "+ username);
-            appendMessage(" Đã kết nối", "Trạng thái", Color.PINK, Color.PINK);
-            appendMessage(" Gửi tin nhắn bây giờ!", "Trạng thái", Color.PINK, Color.PINK);
+            appendMessage(" Đã kết nối", "Trạng thái", Color.BLUE, Color.BLUE);
+            appendMessage(" Gửi tin nhắn bây giờ!", "Trạng thái", Color.BLUE, Color.BLUE);
             
             // Khởi động Client Thread 
             new Thread(new ClientThread(socket, this)).start();
@@ -300,7 +300,6 @@ public class MainForm extends javax.swing.JFrame {
         });
 
         jButton1.setBackground(new java.awt.Color(255, 153, 153));
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Gửi");
         jButton1.setEnabled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -317,10 +316,9 @@ public class MainForm extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(255, 153, 153));
         jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("       Danh sách online");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rabbit2.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/PY_Chat_Small.png"))); // NOI18N
 
         jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/check.png"))); // NOI18N
         jMenu2.setText("Tài Khoản");

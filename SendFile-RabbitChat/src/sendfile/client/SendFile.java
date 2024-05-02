@@ -176,8 +176,9 @@ public class SendFile extends javax.swing.JFrame {
             }
         });
 
-        btnBrowse.setBackground(new java.awt.Color(255, 153, 153));
-        btnBrowse.setForeground(new java.awt.Color(0, 0, 0));
+        btnBrowse.setBackground(new java.awt.Color(0, 204, 255));
+        btnBrowse.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnBrowse.setForeground(new java.awt.Color(255, 255, 255));
         btnBrowse.setText("Tìm File");
         btnBrowse.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBrowse.addActionListener(new java.awt.event.ActionListener() {
@@ -190,8 +191,9 @@ public class SendFile extends javax.swing.JFrame {
 
         progressbar.setStringPainted(true);
 
-        btnSendFile.setBackground(new java.awt.Color(255, 153, 153));
-        btnSendFile.setForeground(new java.awt.Color(0, 0, 0));
+        btnSendFile.setBackground(new java.awt.Color(0, 204, 255));
+        btnSendFile.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnSendFile.setForeground(new java.awt.Color(255, 255, 255));
         btnSendFile.setText("Gửi File");
         btnSendFile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -222,7 +224,7 @@ public class SendFile extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(btnBrowse))
                                 .addComponent(txtSendTo, javax.swing.GroupLayout.Alignment.LEADING)))
-                        .addContainerGap(22, Short.MAX_VALUE))))
+                        .addContainerGap(20, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
